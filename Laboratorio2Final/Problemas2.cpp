@@ -92,11 +92,20 @@ void pruebaGalaxia() {
 }
 
 //PROBLEMA 15//
-#include <iostream>
-using namespace std;
 
-int maximo(int a, int b) { return (a > b) ? a : b; }
-int minimo(int a, int b) { return (a < b) ? a : b; }
+int maximo(int a, int b) {
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+
+int minimo(int a, int b) {
+    if (a < b)
+        return a;
+    else
+        return b;
+}
 
 void interseccionRect(int *A, int *B, int *C) {
     int x1 = maximo(*A, *B);
