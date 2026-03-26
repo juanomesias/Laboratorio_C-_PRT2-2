@@ -92,6 +92,9 @@ void pruebaGalaxia() {
 }
 
 //PROBLEMA 15//
+#include <iostream>
+using namespace std;
+
 int maximo(int a, int b) { return (a > b) ? a : b; }
 int minimo(int a, int b) { return (a < b) ? a : b; }
 
@@ -113,17 +116,26 @@ void interseccionRect(int *A, int *B, int *C) {
 }
 
 void pruebaRectangulos() {
-    int A[4] = {0,0,8,4};
-    int B[4] = {5,2,6,7};
+    int A[4];
+    int B[4];
     int C[4];
+
+    cout << "Rectangulo A (x y ancho alto): ";
+    for (int i = 0; i < 4; i++)
+        cin >> *(A + i);
+
+    cout << "Rectangulo B (x y ancho alto): ";
+    for (int i = 0; i < 4; i++)
+        cin >> *(B + i);
 
     interseccionRect(A, B, C);
 
-    cout << "Interseccion: ";
+    cout << "Interseccion C: ";
     for (int i = 0; i < 4; i++)
-        cout << C[i] << " ";
+        cout << *(C + i) << " ";
     cout << endl;
 }
+
 
 //PROBLEMA 17//
 int sumaDivisores(int n) {
